@@ -4,20 +4,29 @@ Tras instalar las maquinas, con el servidor LAMP, tenemos que configurar las red
 
 Con sudo nano /etc/network/interfaces modificamos la configuracion de las interfaces de nuestras maquina:
 
+
 Maquina -> UbuntuServer
 
 auto lo
+
 iface lo inet loopback
 
 auto enp0s3
+
 iface enp0s3 inet dhcp
 
 auto enp0s8
+
 iface enp0s8 inet static
+
 address 192.168.10.100
+
 netmask 255.255.255.0
+
 gateway 192.168.10.1
+
 network 192.168.10.0
+
 broadcast 192.168.1.255
 
 
@@ -26,17 +35,25 @@ broadcast 192.168.1.255
 Maquina -> Clonada
 
 auto lo
+
 iface lo inet loopback
 
 auto enp0s3
+
 iface enp0s3 inet dhcp
 
 auto enp0s8
+
 iface enp0s8 inet static
+
 address 192.168.10.150
+
 netmask 255.255.255.0
+
 gateway 192.168.10.1
+
 network 192.168.10.0
+
 broadcast 192.168.1.255
 
 
