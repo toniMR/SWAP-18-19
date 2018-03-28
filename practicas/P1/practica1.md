@@ -1,4 +1,4 @@
-#PRACTICA 1 SWAP
+# PRACTICA 1 SWAP
 
 Tras instalar las maquinas, con el servidor LAMP, tenemos que configurar las redes. En mi caso lo he hecho con una red solo-anfitrion. 
 
