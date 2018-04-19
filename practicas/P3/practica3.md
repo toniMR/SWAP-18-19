@@ -81,10 +81,10 @@ Instalo el ab en otra maquina con direccion 192.168.10.111
 
 
 **Resultado test de ab en la granja con balanceador Nginx**
-![img](https://raw.githubusercontent.com/toniMR/SWAP-18-19/master/practicas/P3/imagenes/Test-Maquinas-Nginx.png)
+![img](https://raw.githubusercontent.com/toniMR/SWAP-18-19/master/practicas/P3/imagenes/ab-Nginx.png)
 
 **Resultado test de ab en la granja con balanceador Haproxy**
-![img](https://raw.githubusercontent.com/toniMR/SWAP-18-19/master/practicas/P3/imagenes/Test-Maquinas-Haproxy.png)
+![img](https://raw.githubusercontent.com/toniMR/SWAP-18-19/master/practicas/P3/imagenes/ab-Haproxy.png)
 
 
 **Comparando resultados del test de ab en la granja con Nginx vs Haproxy**
