@@ -11,7 +11,7 @@
 
 hacer que el usuario sea el dueño de la carpeta donde residen los archivos que hay en el espacio web (en ambas máquinas):
 
-- sudo chown pedro:pedro –R /var/www
+- sudo chown antonio:antonio –R /var/www
 
 
 **Copiar una carpeta de una maquina a otra**
