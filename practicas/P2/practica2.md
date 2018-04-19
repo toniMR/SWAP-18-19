@@ -17,7 +17,7 @@ hacer que el usuario sea el dueño de la carpeta donde residen los archivos que 
 **Copiar una carpeta de una maquina a otra**
 - rsync -avz -e ssh ipmaquina1:ruta-archivo ruta-destino
 
-![img](https://raw.githubusercontent.com/toniMR/SWAP-18-19/master/practicas/P2/imagenes/Rsync-Carpeta.png)
+![img](https://raw.githubusercontent.com/toniMR/SWAP-18-19/master/practicas/P2/imagenes/Rsync-carpeta.png)
 
 
 **Acceso sin contraseña para ssh**
