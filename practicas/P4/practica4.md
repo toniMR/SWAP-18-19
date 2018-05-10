@@ -1,10 +1,12 @@
-# PRACTICA 3 SWAP
+# PRACTICA 4 SWAP
 
 **Objetivos de la práctica**
+
 -Instalar un certificado SSL para configurar el acceso HTTPS a los servidores.
 -Configurar las reglas del cortafuegos para proteger la granja web.
 
 **Instalar un certificado SSL autofirmado para configurar el acceso por HTTPS**
+
 a2enmod ssl
 service apache2 restart
 mkdir /etc/apache2/ssl
@@ -33,11 +35,15 @@ Copiamos los certificados y la configuracion de Apache a las demás máquinas.
 
 Para configurar Nginx tenemos que escribir estás líneas en /etc/nginx/conf.d/default.conf
 
-![img](https://raw.githubusercontent.com/toniMR/SWAP-18-19/master/practicas/P4/imagenes/ConfNginx-recortada.png)
+![img](https://raw.githubusercontent.com/toniMR/SWAP-18-19/master/practicas/P4/imagenes/confNginx-recortada.png)
 
 **Configurando el firewall de las máquinas**
-Hacemos un script para reralizarr nuestra configuración:
+Hacemos un script para reralizar nuestra configuración:
 
 ![img](https://raw.githubusercontent.com/toniMR/SWAP-18-19/master/practicas/P4/imagenes/scriptIptables-recortada.png)
 
 Para que se ejecute al iniciar la máquina, tenemos que mover nuestro script a /etc/init.d/<NombeAchivo>, darle permisos de ejecución con chmod +x y actualizar el registro de Script de inicio con **sudo update-rc.d <nombeScript> defaults**
+
+Comprobaremos que se ha realizado correctamente con **sudo iptables -L -n -v**
+
+![img](https://raw.githubusercontent.com/toniMR/SWAP-18-19/master/practicas/P4/imagenes/comprobacion-recortada.png)
