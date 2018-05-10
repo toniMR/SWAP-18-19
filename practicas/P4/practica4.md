@@ -3,24 +3,32 @@
 **Objetivos de la práctica**
 
 -Instalar un certificado SSL para configurar el acceso HTTPS a los servidores.
+
 -Configurar las reglas del cortafuegos para proteger la granja web.
 
 **Instalar un certificado SSL autofirmado para configurar el acceso por HTTPS**
 
 a2enmod ssl
+
 service apache2 restart
+
 mkdir /etc/apache2/ssl
+
 openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/apache2/ssl/apache.key -out /etc/apache2/ssl/apache.crt
+
 
 Editamos el archivo de configuración del sitio default-ssl:
 nano /etc/apache2/sites-available/default-ssl
 
 Y agregamos estas lineas debajo de donde pone SSLEngine on:
+
 SSLCertificateFile /etc/apache2/ssl/apache.crt
 SSLCertificateKeyFile /etc/apache2/ssl/apache.key
 
 Activamos el sitio default--ssl y reiniciamos apache:
+
 a2ensite default-ssl
+
 service apache2 reload
 
 Una vez reiniciado Apache, accedemos al servidor web mediante el protocolo HTTPS
@@ -46,4 +54,17 @@ Para que se ejecute al iniciar la máquina, tenemos que mover nuestro script a /
 
 Comprobaremos que se ha realizado correctamente con **sudo iptables -L -n -v**
 
+
 ![img](https://raw.githubusercontent.com/toniMR/SWAP-18-19/master/practicas/P4/imagenes/comprobacion-recortada.png)
+
+
+
+**Configurando una máquina como firewall que redirecciona al balanceador**
+
+Aunque no se vea en esta imagen hay que poner iptables -P FORWARD ACCEPT.
+
+Me funciona tanto con las líneas que están puestas como las que están comentadas en azul abajo del todo. Pero por alguna razón con las comentadas al hacer sudo iptables -L -n -v en FORWARD no me sale nada (aunque funcionen correctamente). Con las que están puestas si se ve en sudo iptables -L -n -v
+
+![img](https://raw.githubusercontent.com/toniMR/SWAP-18-19/master/practicas/P4/imagenes/configuracionFirewall-recortada.png)
+
+
