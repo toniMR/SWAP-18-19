@@ -2,11 +2,11 @@
 
 **Objetivos de la práctica**
 
-- Clona BD entre máquinas
+- Clonar BD entre máquinas
 
 - Configurar la estructura maestro-esclavo entre 2 máquinas para realizar el clonado automátio de la información.
 
-**Crear una BD e inseta datos**
+**Crear una BD e insertar datos**
 
 - `mysql -root -p`
 - `mysql> create database contactos`;
