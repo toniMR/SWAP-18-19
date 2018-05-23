@@ -89,4 +89,4 @@ Ahora insertamos el usuario probando y veremos como sin hacer nada cambia autom√
 
 
 **NOTA**
-Si nos da un error 1593 se soluciona borrando el archivo /var/liv/mysql/auto.cnf
+Si nos da un error 1593 se soluciona borrando el archivo /var/lib/mysql/auto.cnf
