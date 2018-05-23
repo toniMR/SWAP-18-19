@@ -37,7 +37,6 @@ Desde la segunda máquina hacemos:
 
 - `mysql -u root -p contactos < /tmp/ejemplodb.sql`
 
-![img](https://raw.githubusercontent.com/toniMR/SWAP-18-19/master/practicas/P4/imagenes/confNginx-recortada.png)
 
 **Replicación de BD mediante una configuración maestro-esclavo**
 Editamos /etc/mysql/mysql.conf.d/mysqld.cnf
@@ -80,13 +79,13 @@ Ahora en la otra máquina
 `mysql> UNLOCK TABLES;`
 `mysql> SHOW SLAVE STAUTS\G;`
 
-![img](https://raw.githubusercontent.com/toniMR/SWAP-18-19/master/practicas/P4/imagenes/show-slave-status.png)
+![img](https://raw.githubusercontent.com/toniMR/SWAP-18-19/master/practicas/P5/imagenes/show-slave-status.png)
 
 Ahora insertamos el usuario probando y veremos como sin hacer nada cambia automáticamente en la otra máquina.
 
-![img](https://raw.githubusercontent.com/toniMR/SWAP-18-19/master/practicas/P4/imagenes/insertar-maestro.png)
+![img](https://raw.githubusercontent.com/toniMR/SWAP-18-19/master/practicas/P5/imagenes/insertar-maestro.png)
 
-![img](https://raw.githubusercontent.com/toniMR/SWAP-18-19/master/practicas/P4/imagenes/insertar-esclavo.png)
+![img](https://raw.githubusercontent.com/toniMR/SWAP-18-19/master/practicas/P5/imagenes/insertar-esclavo.png)
 
 
 **NOTA**
